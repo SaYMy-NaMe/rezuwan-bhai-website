@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
           {/*<a href=""><i className="bi bi-twitter-x"></i></a> 
           <a href=""><i className="bi bi-instagram"></i></a>
           <a href=""><i className="bi bi-skype"></i></a>*/}
-          <a href="https://www.facebook.com/listener.rezwan.1" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://www.facebook.com/listener.rezwan.1" target="_blank" rel="noopener noreferrer">
             <i className="bi bi-facebook"></i>
-          </a>
+          </a> */}
           <a href="https://www.linkedin.com/in/md-rezuwan-hasan-04246416b/" target="_blank" rel="noopener noreferrer">
             <i className="bi bi-linkedin"></i>
           </a>

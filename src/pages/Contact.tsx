@@ -51,11 +51,6 @@ const Contact: React.FC = () => {
 
   const socialLinks = [
     {
-      icon: 'bi bi-facebook',
-      title: 'Facebook',
-      link: 'https://www.facebook.com/listener.rezwan.1'
-    },
-    {
       icon: 'bi bi-linkedin',
       title: 'LinkedIn',
       link: 'https://www.linkedin.com/in/md-rezuwan-hasan-04246416b/'
@@ -84,7 +79,7 @@ const Contact: React.FC = () => {
 
   return (
     <>
-      <PageTitle 
+      <PageTitle
         title="Contact"
         description="Feel free to reach out to me for any inquiries, collaborations, or just to say hello! I'm always open to new opportunities and connections."
         breadcrumbs={[
@@ -92,7 +87,7 @@ const Contact: React.FC = () => {
           { name: 'Contact' }
         ]}
       />
-      
+
       <section className="contact section">
         <div className="container">
           <div className="row gy-5">
@@ -103,7 +98,7 @@ const Contact: React.FC = () => {
                 <p className="contact-description">
                   I'm always open to discussing new opportunities, interesting projects, creative ideas, or opportunities to be part of your visions.
                 </p>
-                
+
                 <div className="contact-items">
                   {contactInfo.map((item, index) => (
                     <div key={index} className="contact-item" data-aos="fade-up" data-aos-delay={index * 100}>
@@ -128,10 +123,10 @@ const Contact: React.FC = () => {
                   <h4>Follow Me</h4>
                   <div className="social-links">
                     {socialLinks.map((social, index) => (
-                      <a 
+                      <a
                         key={index}
-                        href={social.link} 
-                        target="_blank" 
+                        href={social.link}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="social-link"
                         title={social.title}
@@ -173,7 +168,7 @@ const Contact: React.FC = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="form-group">
                     <input
                       type="text"
@@ -185,7 +180,7 @@ const Contact: React.FC = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="form-group message-group">
                     <textarea
                       className="form-control"
@@ -197,7 +192,7 @@ const Contact: React.FC = () => {
                       required
                     ></textarea>
                   </div>
-                  
+
                   <div className="form-group submit-group">
                     <button type="submit" className="submit-btn">
                       <i className="bi bi-send"></i>

@@ -10,7 +10,8 @@ const Interests: React.FC = () => {
     },
     {
       title: "Human-Computer Interaction",
-      image: "https://cdn-icons-png.flaticon.com/512/1828/1828778.png",
+      //image: "https://cdn-icons-png.flaticon.com/512/1828/1828778.png",
+      image: "https://static.thenounproject.com/png/human-computer-interaction-icon-6947099-512.png",
       description: "Designing intuitive interfaces and user experiences",
       color: "#5578ff"
     },
@@ -45,7 +46,7 @@ const Interests: React.FC = () => {
       <div className="container">
         <div className="section-title">
           <h2>Research Interests</h2>
-          <p>I'm interested in</p>
+          <div><span>I'm</span> <span className="description-title">Interested in</span></div>
         </div>
 
         <div className="row gy-4">

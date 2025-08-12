@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="hero section dark-background">
-      <img src="/assets/img/hero-bg.jpg" alt="" data-aos="fade-in" />
+      <img src="/assets/img/cover.jpg" alt="" data-aos="fade-in" />
       <div className="container" data-aos="zoom-out" data-aos-delay="100">
         <h2 style={{fontSize: '4rem', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '1rem'}}>Md. Rezuwan Hassan</h2>
         <p style={{fontSize: '2rem', color: '#FFFFFF', marginBottom: '2rem'}}>
