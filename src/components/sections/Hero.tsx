@@ -26,8 +26,8 @@ const Hero: React.FC = () => {
     <section id="hero" className="hero section dark-background">
       <img src="/assets/img/cover.jpg" alt="" data-aos="fade-in" />
       <div className="container" data-aos="zoom-out" data-aos-delay="100">
-        <h2 style={{fontSize: '4rem', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '1rem'}}>Md. Rezuwan Hassan</h2>
-        <p style={{fontSize: '2rem', color: '#FFFFFF', marginBottom: '2rem'}}>
+        <h2 style={{fontWeight: 'bold', color: '#FFFFFF', marginBottom: '1rem'}}>Md. Rezuwan Hassan</h2>
+        <p style={{color: '#FFFFFF', marginBottom: '2rem'}}>
           I'm <span ref={typedRef} style={{borderBottom: '3px solid #20BEFF', paddingBottom: '2px'}}></span>
         </p>
         <div className="social-links" style={{display: 'inline-flex', alignItems: 'center', marginTop: '25px'}}>
