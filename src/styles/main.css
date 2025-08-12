@@ -1166,8 +1166,8 @@ section,
 .resume-card {
   background: var(--surface-color);
   border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 24px;
+  margin-bottom: 24px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   transition: all 0.3s ease;
   position: relative;
@@ -1181,14 +1181,17 @@ section,
 
 /* Card Header */
 .card-header {
-  margin-bottom: 25px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .card-title {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--heading-color);
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
   line-height: 1.2;
 }
 
@@ -1196,13 +1199,41 @@ section,
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--accent-color);
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
+}
+
+/* Logo inside resume cards */
+.card-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.card-logo .optimized-image-container {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+@media (max-width: 576px) {
+  .card-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+  }
 }
 
 .card-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 12px;
   font-size: 0.9rem;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
@@ -1215,13 +1246,13 @@ section,
 .card-description {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
   color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
 /* Supervisors Section */
 .supervisors {
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 }
 
 .supervisors strong {
@@ -1234,7 +1265,7 @@ section,
 .supervisor-links {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .supervisor-links a {
@@ -1252,7 +1283,7 @@ section,
 /* Responsibilities and Projects */
 .responsibilities,
 .projects {
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 }
 
 .responsibilities strong,
@@ -1273,8 +1304,8 @@ section,
 .responsibilities li,
 .projects li {
   position: relative;
-  padding-left: 20px;
-  margin-bottom: 8px;
+  padding-left: 16px;
+  margin-bottom: 6px;
   line-height: 1.5;
   color: color-mix(in srgb, var(--default-color), transparent 10%);
   font-size: 0.9rem;
@@ -1294,7 +1325,7 @@ section,
 .supervisor-info,
 .publication-info,
 .concentration-info {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .thesis-info strong,
@@ -1303,7 +1334,7 @@ section,
 .concentration-info strong {
   color: var(--heading-color);
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 6px;
   font-size: 0.9rem;
 }
 
@@ -1330,26 +1361,26 @@ section,
 
 /* Courses Section */
 .courses-section {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .courses-section strong {
   color: var(--heading-color);
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 0.95rem;
 }
 
 .courses-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .course-item {
   background: rgba(28, 181, 234, 0.1);
   color: var(--accent-color);
-  padding: 6px 12px;
+  padding: 4px 10px;
   border-radius: 6px;
   font-size: 0.85rem;
   border: 1px solid rgba(28, 181, 234, 0.2);

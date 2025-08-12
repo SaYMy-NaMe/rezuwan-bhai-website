@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import OptimizedImage from '../common/OptimizedImage';
 
 const Resume: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'experience' | 'education'>('experience');
@@ -8,6 +9,8 @@ const Resume: React.FC = () => {
       id: 1,
       title: "Artificial Intelligence (AI) Engineer",
       company: "RoboFication LLC",
+      logo: "/assets/img/logo.png",
+      logoAlt: "RoboFication LLC logo",
       location: "Canton, Michigan, United States",
       period: "March, 2025 - Present",
       description: "Specializing in automating systems engineering and certification processes for safety-critical industries using AI and Formal Methods. Developing AI-powered tools for safety analyses, requirements generation, and regulatory compliance.",
@@ -39,6 +42,8 @@ const Resume: React.FC = () => {
       id: 2,
       title: "Research Engineer",
       company: "BRAC University",
+      logo: "/assets/img/logo.png",
+      logoAlt: "BRAC University logo",
       location: "Dhaka, Bangladesh",
       period: "February, 2024 - February, 2025",
       description: "Led research initiatives in speech processing and AI applications, focusing on Bengali language technologies and deep learning models.",
@@ -73,6 +78,8 @@ const Resume: React.FC = () => {
       degree: "Master of Science - M.Sc",
       field: "Computer Science Engineering",
       institution: "BRAC University, Dhaka, Bangladesh",
+      logo: "/assets/img/logo.png",
+      logoAlt: "BRAC University logo",
       period: "2021 - 2023",
       thesis: {
         title: "A character gram modeling approach towards Bengali Speech to Text with Regional Dialects",
@@ -98,6 +105,8 @@ const Resume: React.FC = () => {
       degree: "Bachelor of Science - B.Sc",
       field: "Electrical and Electronics Engineering",
       institution: "BRAC University, Dhaka, Bangladesh",
+      logo: "/assets/img/logo.png",
+      logoAlt: "BRAC University logo",
       period: "2016 - 2020",
       thesis: {
         title: "Efficient approach for reliability evaluation of the BUS4 distribution system considering momentary interruption",
@@ -165,6 +174,16 @@ const Resume: React.FC = () => {
               {experienceData.map((exp, index) => (
                 <div key={exp.id} className="resume-card" data-aos="fade-up" data-aos-delay={index * 100}>
                   <div className="card-header">
+                    {exp.logo && (
+                      <div className="card-logo">
+                        <OptimizedImage
+                          src={exp.logo}
+                          alt={exp.logoAlt || `${exp.company} logo`}
+                          aspectRatio="1/1"
+                          objectFit="contain"
+                        />
+                      </div>
+                    )}
                     <div className="card-info">
                       <h3 className="card-title">{exp.title}</h3>
                       <h4 className="card-company">{exp.company}</h4>
@@ -221,6 +240,16 @@ const Resume: React.FC = () => {
               {educationData.map((edu, index) => (
                 <div key={edu.id} className="resume-card" data-aos="fade-up" data-aos-delay={index * 100}>
                   <div className="card-header">
+                    {edu.logo && (
+                      <div className="card-logo">
+                        <OptimizedImage
+                          src={edu.logo}
+                          alt={edu.logoAlt || `${edu.institution} logo`}
+                          aspectRatio="1/1"
+                          objectFit="contain"
+                        />
+                      </div>
+                    )}
                     <div className="card-info">
                       <h3 className="card-title">{edu.degree}</h3>
                       <h4 className="card-company">{edu.field}</h4>
