@@ -2238,6 +2238,20 @@ textarea.form-control {
   flex: 1;
 }
 
+.research-description .see-toggle {
+  margin-left: 6px;
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.research-description .see-toggle:hover {
+  text-decoration: underline;
+}
+
 /* Research Link */
 .research-link {
   margin-top: auto;
@@ -2335,6 +2349,12 @@ textarea.form-control {
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+}
+
+/* Remove decorative bullets injected for generic project lists from filter items */
+.projects .filter-list li::before,
+.project-filters .filter-item::before {
+  content: none !important;
 }
 
 .filter-item {

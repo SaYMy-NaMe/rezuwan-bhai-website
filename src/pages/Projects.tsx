@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PageTitle from '../components/sections/PageTitle';
+import FilterBar from '../components/common/FilterBar';
 
 const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -138,18 +139,13 @@ const Projects: React.FC = () => {
       <section className="projects section">
         <div className="container">
           {/* Filter Buttons */}
-          <div className="project-filters" data-aos="fade-up">
-            <ul className="filter-list">
-              {filters.map(filter => (
-                <li 
-                  key={filter.id}
-                  className={`filter-item ${activeFilter === filter.id ? 'active' : ''}`}
-                  onClick={() => setActiveFilter(filter.id)}
-                >
-                  {filter.name}
-                </li>
-              ))}
-            </ul>
+          <div className="project-filters">
+            <FilterBar
+              filters={filters}
+              activeId={activeFilter}
+              onChange={setActiveFilter}
+              data-aos="fade-up"
+            />
           </div>
 
           {/* Projects Grid */}
