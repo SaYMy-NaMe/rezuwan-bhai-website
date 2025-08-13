@@ -21,10 +21,10 @@ const Header: React.FC = () => {
 
   return (
     <header id="header" className={`header d-flex align-items-center fixed-top ${isHeaderHidden ? 'header-hidden' : ''}`}>
-      <div className="container-fluid position-relative d-flex align-items-center justify-content-between" style={{ paddingLeft: '20px', paddingRight: '20px', marginLeft: '0', marginRight: '0', width: '100%' }}>
+      <div className="container-fluid position-relative d-flex align-items-center justify-content-between" style={{paddingLeft: '20px', paddingRight: '40px', marginLeft: '0', marginRight: '0', width: '100%'}}>
         
-        {/* Logo Section */}
-        <div style={{ flex: '1 1 auto', minWidth: 0 }}>
+        {/* Logo Section - Takes up half the width */}
+        <div style={{width: '45%'}}>
           <Link to="/" className="logo d-flex align-items-center" style={{paddingLeft: '10px', marginLeft: '10px', alignItems: 'flex-start'}}>
             {/* Uncomment the line below if you also wish to use an image logo */}
             {/* <img src="assets/img/logo.png" alt="" /> */}
@@ -32,8 +32,8 @@ const Header: React.FC = () => {
           </Link>
         </div>
 
-        {/* Navigation Section */}
-        <div style={{ flex: '1 1 auto', display: 'flex', justifyContent: 'flex-end', minWidth: 0 }}>
+        {/* Navigation Section - Takes up the other half */}
+        <div style={{width: '55%', display: 'flex', justifyContent: 'flex-end'}}>
           <nav id="navmenu" className={`navmenu ${isMobileNavActive ? 'mobile-nav-active' : ''}`} style={{width: '100%'}}>
             <ul className="d-none d-lg-flex" style={{width: '100%', justifyContent: 'space-between', margin: '0', padding: '0 20px 0 0', listStyle: 'none'}}>
               <li>

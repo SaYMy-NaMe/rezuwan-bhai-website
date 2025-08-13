@@ -8,7 +8,8 @@ import 'aos/dist/aos.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './styles/vendor/bootstrap/css/bootstrap.min.css';
 import './styles/vendor/bootstrap-icons/bootstrap-icons.css';
-// Removed unused vendor CSS (Swiper, Glightbox)
+import './styles/vendor/swiper/swiper-bundle.min.css';
+import './styles/vendor/glightbox/css/glightbox.min.css';
 
 // Project fonts and base styles next
 import './styles/fonts.css';

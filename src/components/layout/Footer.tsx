@@ -7,7 +7,8 @@ const Footer: React.FC = () => {
     <footer id="footer" className="footer dark-background">
       <div className="container">
         <h3>Md. Rezuwan Hassan</h3>
-        <p>An engineer on day, a researcher on night, and an artist in between.</p>
+        <p>A researcher by day, an engineer by night, and an artist all the way.</p>
+        <br/>
         <div className="social-links d-flex justify-content-center">
           {/*<a href=""><i className="bi bi-twitter-x"></i></a> 
           <a href=""><i className="bi bi-instagram"></i></a>

@@ -11,15 +11,33 @@ const Interests: React.FC = () => {
     {
       title: "Human-Computer Interaction",
       //image: "https://cdn-icons-png.flaticon.com/512/1828/1828778.png",
-      image: "https://static.thenounproject.com/png/human-computer-interaction-icon-6947099-512.png",
+      image: "https://www.vhv.rs/dpng/d/466-4660054_iap43345-human-computer-interaction-logo-hd-png-download.png",
       description: "Designing intuitive interfaces and user experiences",
       color: "#5578ff"
     },
     {
-      title: "Federated Learning",
-      image: "https://miro.medium.com/v2/resize:fit:823/1*fEUxSGQGOFgwobm6br9WCg.jpeg",
-      description: "Distributed machine learning with privacy preservation",
+      title: "Computational Social Science",
+      image: "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/42/2d33a37006421bbba9bbaf6f834b37/DSV1078_1200x1200.png",
+      description: "Understanding social behavior through computational models",
       color: "#e80368"
+    },
+    {
+      title: "Natural Language Processing",
+      image: "https://cdn-icons-png.flaticon.com/512/9831/9831356.png",
+      description: "Enabling machines to understand and respond to human language",
+      color: "#33fd70ff"
+    },
+    {
+      title: "Generative AI",
+      image: "https://static.vecteezy.com/system/resources/previews/034/846/004/non_2x/artificial-intelligence-ai-logo-icon-vector.jpg",
+      description: "Creating new content and ideas through AI",
+      color: "#9e13eeff"
+    },
+    {
+      title: "Federated Learning",
+      image: "https://static.vecteezy.com/system/resources/previews/053/124/328/non_2x/synthetic-data-blue-gradient-concept-icon-type-of-privacy-enhancing-technologies-information-round-shape-line-illustration-abstract-idea-graphic-design-easy-to-use-in-article-vector.jpg",
+      description: "Distributed machine learning with privacy preservation",
+      color: "#d3c015ff"
     },
     {
       title: "Meta-Learning",

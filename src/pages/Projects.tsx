@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PageTitle from '../components/sections/PageTitle';
-import FilterBar from '../components/common/FilterBar';
 
 const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -129,7 +128,7 @@ const Projects: React.FC = () => {
     <>
       <PageTitle 
         title="Projects"
-        description="Showcasing innovative solutions and research contributions across AI, web development, and mobile applications"
+        description="AI projects aren't built on code alone, but on curiosity, patience, and a thousand tiny experiments."
         breadcrumbs={[
           { name: 'Home', path: '/' },
           { name: 'Projects' }
@@ -139,13 +138,18 @@ const Projects: React.FC = () => {
       <section className="projects section">
         <div className="container">
           {/* Filter Buttons */}
-          <div className="project-filters">
-            <FilterBar
-              filters={filters}
-              activeId={activeFilter}
-              onChange={setActiveFilter}
-              data-aos="fade-up"
-            />
+          <div className="project-filters" data-aos="fade-up">
+            <ul className="filter-list">
+              {filters.map(filter => (
+                <li 
+                  key={filter.id}
+                  className={`filter-item ${activeFilter === filter.id ? 'active' : ''}`}
+                  onClick={() => setActiveFilter(filter.id)}
+                >
+                  {filter.name}
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Projects Grid */}
