@@ -2265,13 +2265,70 @@ textarea.form-control {
   line-height: 1.4;
 }
 
+/* Research Description Container */
+.research-description-container {
+  margin: 0 0 20px 0;
+  flex: 1;
+}
+
 /* Research Description */
 .research-description {
   font-size: 0.9rem;
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 10%);
-  margin: 0 0 20px 0;
-  flex: 1;
+  margin: 0 0 12px 0;
+  transition: all 0.3s ease;
+}
+
+/* Inline See More/Less (Facebook Style) */
+.see-more-inline,
+.see-less-inline {
+  color: var(--accent-color);
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 4px;
+  transition: color 0.2s ease;
+}
+
+.see-more-inline:hover,
+.see-less-inline:hover {
+  color: #20BEFF;
+  text-decoration: underline;
+}
+
+/* Toggle Description Button */
+.toggle-description-btn {
+  background: var(--accent-color) !important;
+  border: none !important;
+  color: white !important;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease;
+  display: block !important;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 0 0 !important;
+  width: auto;
+  min-width: 100px;
+}
+
+.toggle-description-btn:hover {
+  background: #20BEFF !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(32, 190, 255, 0.3);
+}
+
+.toggle-description-btn i {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.toggle-description-btn:hover i {
+  transform: scale(1.1);
 }
 
 /* Research Link */
@@ -2362,6 +2419,12 @@ textarea.form-control {
   text-align: center;
 }
 
+/* Research Filters */
+.research-filters {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 .filter-list {
   display: flex;
   justify-content: center;
@@ -2384,6 +2447,9 @@ textarea.form-control {
   font-size: 0.9rem;
   font-weight: 500;
   user-select: none;
+  position: relative;
+  text-decoration: none;
+  list-style: none;
 }
 
 .filter-item:hover {
@@ -2396,6 +2462,13 @@ textarea.form-control {
   background: var(--accent-color);
   color: white;
   border-color: var(--accent-color);
+}
+
+/* Remove any pseudo-elements from filter buttons */
+.filter-item::before,
+.filter-item::after {
+  display: none !important;
+  content: none !important;
 }
 
 /* Projects Grid */
