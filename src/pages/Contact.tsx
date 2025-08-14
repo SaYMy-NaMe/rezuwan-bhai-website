@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import PageTitle from '../components/sections/PageTitle';
 
+interface SocialLink {
+  name: string;
+  url: string;
+  icon: string;
+  alt: string;
+  height: string;
+  width: string;
+}
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -8,6 +17,49 @@ const Contact: React.FC = () => {
     subject: '',
     message: ''
   });
+
+  const socialLinks: SocialLink[] = [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/md-rezuwan-hasan-04246416b",
+      icon: "https://raw.githubusercontent.com/RezuwanHassan262/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg",
+      alt: "LinkedIn Link",
+      height: "30",
+      width: "40"
+    },
+    {
+      name: "Google Scholar",
+      url: "https://scholar.google.com/citations?user=ZUrWZhQAAAAJ&hl=en",
+      icon: "https://user-images.githubusercontent.com/556268/96353342-3f386c80-10cb-11eb-9865-0c40dfe6ab8b.png",
+      alt: "Google Scholar Link",
+      height: "40",
+      width: "40"
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/RezuwanHassan262",
+      icon: "https://raw.githubusercontent.com/RezuwanHassan262/github-profile-readme-generator/master/src/images/icons/Social/github.svg",
+      alt: "GitHub Link",
+      height: "30",
+      width: "40"
+    },
+    {
+      name: "Hugging Face",
+      url: "https://huggingface.co/Rezuwan",
+      icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+      alt: "Hugging Face",
+      height: "30",
+      width: "30"
+    },
+    {
+      name: "Kaggle",
+      url: "https://www.kaggle.com/mdrezuwanhassan",
+      icon: "https://raw.githubusercontent.com/RezuwanHassan262/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg",
+      alt: "Kaggle Link",
+      height: "30",
+      width: "40"
+    }
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,34 +98,6 @@ const Contact: React.FC = () => {
       title: 'LinkedIn',
       content: 'md-rezuwan-hasan-04246416b',
       link: 'https://www.linkedin.com/in/md-rezuwan-hasan-04246416b/'
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: 'bi bi-linkedin',
-      title: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/md-rezuwan-hasan-04246416b/'
-    },
-    {
-      icon: 'bi bi-github',
-      title: 'GitHub',
-      link: 'https://github.com/RezuwanHassan262'
-    },
-    {
-      icon: 'fab fa-google-scholar',
-      title: 'Google Scholar',
-      link: 'https://scholar.google.com/citations?user=ZUrWZhQAAAAJ&hl=en'
-    },
-    {
-      icon: 'fa-solid fa-robot',
-      title: 'Hugging Face',
-      link: 'https://huggingface.co/Rezuwan'
-    },
-    {
-      icon: 'fab fa-kaggle',
-      title: 'Kaggle',
-      link: 'https://www.kaggle.com/mdrezuwanhassan'
     }
   ];
 
@@ -125,13 +149,18 @@ const Contact: React.FC = () => {
                     {socialLinks.map((social, index) => (
                       <a
                         key={index}
-                        href={social.link}
+                        href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="social-link"
-                        title={social.title}
+                        title={social.name}
                       >
-                        <i className={social.icon}></i>
+                        <img 
+                          src={social.icon} 
+                          alt={social.alt} 
+                          height={social.height} 
+                          width={social.width}
+                        />
                       </a>
                     ))}
                   </div>

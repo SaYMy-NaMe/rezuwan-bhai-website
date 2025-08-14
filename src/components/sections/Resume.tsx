@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import OptimizedImage from '../common/OptimizedImage';
 
+interface MediaItem {
+  src: string;
+  alt: string;
+}
+
+interface SimpleResumeItem {
+  id: number;
+  title: string;
+  shortDescription?: string;
+  description?: string | string[];
+  images?: MediaItem[];
+}
+
 const Resume: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'experience' | 'education'>('experience');
+  const [activeTab, setActiveTab] = useState<'experience' | 'education' | 'achievement' | 'volunteering' | 'awards'>('experience');
 
   const experienceData = [
     {
@@ -215,6 +228,133 @@ Apart from covering the theories, I also demonstrated the concepts practically u
     }
   ];
 
+  // New tabs data (dummy/sample items)
+  const achievementData: SimpleResumeItem[] = [
+    {
+      id: 1,
+      title: "Kaggle Competition – Top 5%",
+      shortDescription: "Ranked 158/3,200 teams in an image classification challenge",
+      description: [
+        "Built an ensemble of CNNs with heavy augmentations and pseudo-labeling.",
+        "Leveraged stratified k-fold validation and test-time augmentation."
+      ],
+      images: [
+        { src: "https://placehold.co/420x260/png?text=Leaderboard", alt: "Leaderboard screenshot" },
+        { src: "https://placehold.co/420x260/png?text=Confusion+Matrix", alt: "Confusion matrix" }
+      ]
+    },
+    {
+      id: 2,
+      title: "Open Source – Contributor of the Month",
+      shortDescription: "Recognized for impactful PRs to a popular NLP toolkit",
+      description: [
+        "Added multilingual tokenization fixes and improved benchmarks pipeline.",
+        "Wrote documentation and examples that increased adoption."
+      ],
+      images: [
+        { src: "https://placehold.co/420x260/png?text=Pull+Requests", alt: "Pull requests" },
+        { src: "https://placehold.co/420x260/png?text=Docs+Preview", alt: "Docs preview" }
+      ]
+    }
+  ];
+
+  const volunteeringData: SimpleResumeItem[] = [
+    {
+      id: 1,
+      title: "Community Tech Mentor",
+      shortDescription: "Weekly mentoring sessions for university students",
+      description: [
+        "Helped students learn Python, ML basics, and project structuring.",
+        "Set up code reviews and mini hackathons to practice collaboration."
+      ],
+      images: [
+        { src: "https://placehold.co/420x260/png?text=Mentoring", alt: "Mentoring session" },
+        { src: "https://placehold.co/420x260/png?text=Workshop", alt: "Workshop group photo" }
+      ]
+    },
+    {
+      id: 2,
+      title: "Data Science Meetup – Organizer",
+      shortDescription: "Quarterly meetup hosting 100+ practitioners",
+      description: [
+        "Coordinated speakers, logistics, and capture of talk recordings.",
+        "Curated beginner-friendly talks alongside advanced sessions."
+      ],
+      images: [
+        { src: "https://placehold.co/420x260/png?text=Meetup", alt: "Meetup event" },
+        { src: "https://placehold.co/420x260/png?text=Talks", alt: "Speaker session" }
+      ]
+    }
+  ];
+
+  const awardsData: SimpleResumeItem[] = [
+    {
+      id: 1,
+      title: "Dean's List – BRAC University",
+      shortDescription: "Awarded for outstanding academic performance",
+      description: "Recognized for maintaining a high CGPA and demonstrating leadership in student initiatives.",
+      images: [
+        { src: "https://placehold.co/420x260/png?text=Certificate", alt: "Dean's list certificate" },
+        { src: "https://placehold.co/420x260/png?text=Ceremony", alt: "Award ceremony photo" }
+      ]
+    },
+    {
+      id: 2,
+      title: "Best Paper Award – IEEE Student Conference",
+      shortDescription: "Paper on low-resource ASR techniques",
+      description: [
+        "Proposed a character-gram approach improving WER in dialectal Bengali.",
+        "Released reproducible code and dataset splits to the community."
+      ],
+      images: [
+        { src: "https://placehold.co/420x260/png?text=Best+Paper", alt: "Best paper badge" },
+        { src: "https://placehold.co/420x260/png?text=Presentation", alt: "Conference presentation" }
+      ]
+    }
+  ];
+
+  const renderSimpleCards = (items: SimpleResumeItem[]) => {
+    if (!items || items.length === 0) {
+      return (
+        <div className="resume-card" data-aos="fade-up" data-aos-delay="0">
+          <div className="card-body">
+            <p className="card-description">No records added yet.</p>
+          </div>
+        </div>
+      );
+    }
+    return items.map((item, index) => (
+      <div key={item.id} className="resume-card" data-aos="fade-up" data-aos-delay={index * 100}>
+        <div className="card-header">
+          <div className="card-info">
+            <h3 className="card-title">{item.title}</h3>
+            {item.shortDescription && (
+              <div className="card-short-description">{item.shortDescription}</div>
+            )}
+          </div>
+        </div>
+        <div className="card-body">
+          {item.description && (
+            <div className="card-description">
+              <p>
+                {Array.isArray(item.description)
+                  ? item.description.join(' ')
+                  : item.description.replace(/\n+/g, ' ')}
+              </p>
+            </div>
+          )}
+          {item.images && item.images.length > 0 && (
+            <div className="card-images">
+              {item.images.map((img, i) => (
+                <img key={i} src={img.src} alt={img.alt} />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    ));
+  };
+
   return (
     <section id="resume" className="resume section">
       <div className="container">
@@ -234,6 +374,27 @@ Apart from covering the theories, I also demonstrated the concepts practically u
             >
               <i className="bi bi-mortarboard"></i>
               Education
+            </button>
+            <button
+              className={`tab-button ${activeTab === 'achievement' ? 'active' : ''}`}
+              onClick={() => setActiveTab('achievement')}
+            >
+              <i className="bi bi-trophy"></i>
+              Achievement
+            </button>
+            <button
+              className={`tab-button ${activeTab === 'volunteering' ? 'active' : ''}`}
+              onClick={() => setActiveTab('volunteering')}
+            >
+              <i className="bi bi-people"></i>
+              Volunteering
+            </button>
+            <button
+              className={`tab-button ${activeTab === 'awards' ? 'active' : ''}`}
+              onClick={() => setActiveTab('awards')}
+            >
+              <i className="bi bi-award"></i>
+              Awards and Honors
             </button>
           </div>
         </div>
@@ -400,6 +561,24 @@ Apart from covering the theories, I also demonstrated the concepts practically u
                   </div>
                 </div>
               ))}
+            </div>
+          )}
+
+          {activeTab === 'achievement' && (
+            <div className="achievement-section">
+              {renderSimpleCards(achievementData)}
+            </div>
+          )}
+
+          {activeTab === 'volunteering' && (
+            <div className="volunteering-section">
+              {renderSimpleCards(volunteeringData)}
+            </div>
+          )}
+
+          {activeTab === 'awards' && (
+            <div className="awards-section">
+              {renderSimpleCards(awardsData)}
             </div>
           )}
         </div>

@@ -1,8 +1,60 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 
+interface SocialLink {
+  name: string;
+  url: string;
+  icon: string;
+  alt: string;
+  height: string;
+  width: string;
+}
+
 const Hero: React.FC = () => {
   const typedRef = useRef<HTMLSpanElement>(null);
+
+  const socialLinks: SocialLink[] = [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/md-rezuwan-hasan-04246416b",
+      icon: "https://raw.githubusercontent.com/RezuwanHassan262/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg",
+      alt: "LinkedIn Link",
+      height: "30",
+      width: "40"
+    },
+    {
+      name: "Google Scholar",
+      url: "https://scholar.google.com/citations?user=ZUrWZhQAAAAJ&hl=en",
+      icon: "https://user-images.githubusercontent.com/556268/96353342-3f386c80-10cb-11eb-9865-0c40dfe6ab8b.png",
+      alt: "Google Scholar Link",
+      height: "40",
+      width: "40"
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/RezuwanHassan262",
+      icon: "https://raw.githubusercontent.com/RezuwanHassan262/github-profile-readme-generator/master/src/images/icons/Social/github.svg",
+      alt: "GitHub Link",
+      height: "30",
+      width: "40"
+    },
+    {
+      name: "Kaggle",
+      url: "https://www.kaggle.com/mdrezuwanhassan",
+      icon: "https://raw.githubusercontent.com/RezuwanHassan262/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg",
+      alt: "Kaggle Link",
+      height: "30",
+      width: "40"
+    },
+    {
+      name: "Hugging Face",
+      url: "https://huggingface.co/Rezuwan",
+      icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+      alt: "Hugging Face",
+      height: "30",
+      width: "30"
+    }
+  ];
 
   useEffect(() => {
     if (typedRef.current) {
@@ -30,23 +82,26 @@ const Hero: React.FC = () => {
         <p style={{fontSize: '2rem', color: '#FFFFFF', marginBottom: '2rem'}}>
           I'm <span ref={typedRef} style={{borderBottom: '3px solid #20BEFF', paddingBottom: '2px'}}></span>
         </p>
-        <div className="social-links" style={{display: 'inline-flex', alignItems: 'center', marginTop: '25px'}}>
-          <a href="https://www.linkedin.com/in/md-rezuwan-hasan-04246416b/" target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', background: 'rgba(250,250,250,0.1)', color: '#fafafa', borderRadius: '50px', fontSize: '14px', marginRight: '20px', textDecoration: 'none', transition: '0.3s'}}>
-            <i className="bi bi-linkedin"></i>
-          </a>
-          <a href="https://github.com/RezuwanHassan262" target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', background: 'rgba(250,250,250,0.1)', color: '#fafafa', borderRadius: '50px', fontSize: '14px', marginRight: '20px', textDecoration: 'none', transition: '0.3s'}}>
-            <i className="bi bi-github"></i>
-          </a>
-          <a href="https://scholar.google.com/citations?user=ZUrWZhQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', background: 'rgba(250,250,250,0.1)', color: '#fafafa', borderRadius: '50px', fontSize: '14px', marginRight: '20px', textDecoration: 'none', transition: '0.3s'}}>
-            <i className="fab fa-google-scholar"></i>
-          </a>
-          <a href="https://huggingface.co/Rezuwan" target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', background: 'rgba(250,250,250,0.1)', color: '#fafafa', borderRadius: '50px', fontSize: '14px', marginRight: '20px', textDecoration: 'none', transition: '0.3s'}}>
-            <i className="fa-solid fa-robot"></i>
-          </a>
-          <a href="https://www.kaggle.com/mdrezuwanhassan" target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', background: 'rgba(250,250,250,0.1)', color: '#fafafa', borderRadius: '50px', fontSize: '14px', marginRight: '0', textDecoration: 'none', transition: '0.3s'}}>
-            <i className="fab fa-kaggle"></i>
-          </a>
+        {/* Temporarily commented out to debug the yellow graphic issue
+        <div className="social-links d-flex justify-content-center">
+          {socialLinks.map((link, index) => (
+            <a 
+              key={index}
+              href={link.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              title={link.name}
+            >
+              <img 
+                src={link.icon} 
+                alt={link.alt} 
+                height={link.height} 
+                width={link.width} 
+              />
+            </a>
+          ))}
         </div>
+        */}
       </div>
     </section>
   );

@@ -165,7 +165,8 @@ const AboutSection: React.FC = () => {
             
             <div style={{
               marginTop: '25px',
-              marginLeft: '-450px', /* Extended much further to the left to match screenshot */
+              marginLeft: '-380px', /* Extended much further to the left to match screenshot */
+              marginRight: '8px', 
               width: 'calc(100% + 450px)', /* Ensure width adjusts with the negative margin */
               padding: '20px',
               background: 'var(--surface-color)',

@@ -115,9 +115,9 @@ const SkillsSection: React.FC = () => {
     <section id="skills" className="skills section">
       <div className="container">
         <div className="section-title" data-aos="fade-up">
-          <h2>Skills</h2>
+        <h2>Skills</h2>
           <div>Technical Expertise</div>
-        </div>
+      </div>
 
         <div className="row" data-aos="fade-up" data-aos-delay="100">
           <div className="col-lg-12">
@@ -133,8 +133,8 @@ const SkillsSection: React.FC = () => {
                       title={skill.name}
                     />
                   ))}
-                </div>
               </div>
+            </div>
             ))}
           </div>
         </div>
@@ -143,4 +143,4 @@ const SkillsSection: React.FC = () => {
   );
 };
 
-export default SkillsSection;
+export default SkillsSection; 
