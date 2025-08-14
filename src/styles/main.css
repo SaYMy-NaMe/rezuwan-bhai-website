@@ -897,38 +897,66 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+.skills {
+  padding: 60px 0;
 }
 
-.skills .progress .skill {
+.skills-category {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 1.3rem;
+  font-weight: 700;
   color: var(--heading-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+  align-items: center;
 }
 
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
+.badges-container img {
+  height: 28px;
+  transition: transform 0.2s ease;
 }
 
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
+.badges-container img:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-title {
+    font-size: 1.1rem;
+  }
+  
+  .badges-container {
+    gap: 8px;
+  }
+  
+  .badges-container img {
+    height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .category-title {
+    font-size: 1rem;
+  }
+  
+  .badges-container {
+    gap: 6px;
+  }
+  
+  .badges-container img {
+    height: 22px;
+  }
 }
 
 /*--------------------------------------------------------------
