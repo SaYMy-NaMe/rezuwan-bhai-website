@@ -186,7 +186,7 @@ const SkillsSection: React.FC = () => {
         <div className="section-title" data-aos="fade-up">
         <h2>Skills</h2>
         <br/>
-        <div>Technical Expertise</div>
+        <div><span>Technical</span> <span className="description-title">Expertise</span></div>
       </div>
 
         <div className="row" data-aos="fade-up" data-aos-delay="100">
