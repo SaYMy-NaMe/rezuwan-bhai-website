@@ -3,6 +3,7 @@ import PageTitle from '../components/sections/PageTitle';
 import AboutSection from '../components/sections/About';
 import Skills from '../components/sections/Skills';
 import Interests from '../components/sections/Interests';
+import Hobbies from '../components/sections/Hobbies';
 
 const About: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const About: React.FC = () => {
       <AboutSection />
       <Skills />
       <Interests />
+      <Hobbies />
     </>
   );
 };

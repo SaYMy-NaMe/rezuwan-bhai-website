@@ -72,7 +72,7 @@ const AboutSection: React.FC = () => {
             }}>
               An artistic soul with a passion for AI
             </p>
-            
+
             <div className="row">
               <div className="col-lg-6">
                 <ul style={{
@@ -165,7 +165,7 @@ const AboutSection: React.FC = () => {
             
             <div style={{
               marginTop: '25px',
-              marginLeft: '-380px', /* Extended much further to the left to match screenshot */
+              marginLeft: '-450px', /* Extended much further to the left to match screenshot */
               marginRight: '8px', 
               width: 'calc(100% + 450px)', /* Ensure width adjusts with the negative margin */
               padding: '20px',

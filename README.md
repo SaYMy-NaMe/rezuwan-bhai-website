@@ -190,7 +190,7 @@ This project is licensed under the MIT License.
 
 For questions or support, please contact:
 - Email: rezwanhasan262@gmail.com
-- LinkedIn: [Md. Rezuwan Hassan](https://www.linkedin.com/in/md-rezuwan-hasan-04246416b/)
+- LinkedIn: [Md. Rezuwan Hassan](https://www.linkedin.com/in/md-rezuwan-hassan/)
 
 ---
 

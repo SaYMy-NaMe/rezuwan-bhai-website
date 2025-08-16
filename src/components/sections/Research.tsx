@@ -7,6 +7,7 @@ interface ResearchItem {
   venue: string;
   image: string;
   link: string;
+  presentationLink?: string;  // Making it optional with '?'
   description: string;
   type: string;
   categories: string[];
@@ -33,6 +34,7 @@ const ResearchSection: React.FC = () => {
   };
 
   const researchData: ResearchItem[] = [
+
     {
       id: 1,
       title: "A Horizontal Federated Random Forest for Heart Disease Detection from Decentralized Local Data",
@@ -184,6 +186,11 @@ const ResearchSection: React.FC = () => {
                     <a href={research.link} target="_blank" rel="noopener noreferrer" className="read-more">
                       Read Paper <i className="bi bi-arrow-up-right"></i>
                     </a>
+                    {research.presentationLink && (
+                      <a href={research.presentationLink} target="_blank" rel="noopener noreferrer" className="read-more ms-3">
+                        View Presentation <i className="bi bi-camera-video"></i>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

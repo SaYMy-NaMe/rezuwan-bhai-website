@@ -1372,6 +1372,18 @@ section,
   margin-top: 2px;
 }
 
+/* Organization and date styling */
+.organization {
+  display: block;
+}
+
+.date-line {
+  display: block;
+  margin-top: 8px;
+  font-style: italic;
+  color: #666;
+}
+
 /* Supervisors Section */
 .supervisors {
   margin-bottom: 16px;
@@ -2496,6 +2508,9 @@ textarea.form-control {
 /* Research Link */
 .research-link {
   margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .read-more {

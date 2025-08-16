@@ -64,7 +64,11 @@ const Interests: React.FC = () => {
       <div className="container">
         <div className="section-title">
           <h2>Research Interests</h2>
+          <br/>
           <div><span>I'm</span> <span className="description-title">Interested in</span></div>
+          <p className="subtitle" style={{ fontSize: '1rem', color: '#666', maxWidth: '700px', margin: '0 auto', marginTop: '15px' }}>
+            The topics that make me excited to explore, test ideas, and chase answers.
+          </p>
         </div>
 
         <div className="row gy-4">

@@ -1,7 +1,7 @@
 export const SOCIAL_LINKS = [
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/md-rezuwan-hasan-04246416b/',
+    url: 'https://www.linkedin.com/in/md-rezuwan-hassan/',
     icon: 'bi bi-linkedin'
   },
   {

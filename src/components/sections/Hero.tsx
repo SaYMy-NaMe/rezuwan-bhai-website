@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   const socialLinks: SocialLink[] = [
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/md-rezuwan-hasan-04246416b",
+      url: "https://www.linkedin.com/in/md-rezuwan-hassan/",
       icon: "https://raw.githubusercontent.com/RezuwanHassan262/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg",
       alt: "LinkedIn Link",
       height: "30",
